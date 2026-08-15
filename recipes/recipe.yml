@@ -6,40 +6,51 @@ name: Vulpine-OS
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/blue-build/base-images/fedora-base-nvidia
 image-version: latest # You can pin to a specific version of Fedora as well
+
+platforms:
+  - linux/amd64
+  - linux/arm64
+modules:
+  - from-file: base/common.yml
+  - from-file: base/nvidia.yml
+  - type: os-release
+    properties:
+      PRETTY_NAME: BlueBuild OS for Nvidia (FROM Fedora base-atomic)
+  - from-file: base/post-build.yml
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
-modules:
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+#modules:
+  #- type: files
+  #  files:
+  #    - source: system
+   #     destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  - type: dnf
-    repos:
-      copr:
-        - atim/starship
-    install:
-      packages:
-        - micro
-        - starship
-    remove:
-      packages:
+ # - type: dnf
+  #  repos:
+  #    copr:
+    #    - atim/starship
+  #  install:
+   #   packages:
+     #   - micro
+     #   - starship
+   # remove:
+   #   packages:
         # example: removing firefox (in favor of the flatpak)
         # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+   #     - firefox
+    #    - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
-  - type: default-flatpaks
-    configurations:
-      - notify: true # Send notification after install/uninstall is finished (true/false)
-        scope: system
+#  - type: default-flatpaks
+  #  configurations:
+   #   - notify: true # Send notification after install/uninstall is finished (true/false)
+   #     scope: system
         # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
-          - org.gnome.Loupe
-      - scope: user # Also add Flathub user repo, but no user packages
+    #    install: # system flatpaks we want all users to have and not remove
+      #    - org.mozilla.firefox
+      #    - org.gnome.Loupe
+   #   - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
