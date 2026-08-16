@@ -7,14 +7,14 @@ description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/blue-build/base-images/fedora-base-nvidia
-image-version: latest # You can pin to a specific version of Fedora as well
+image-version: 43 # You can pin to a specific version of Fedora as well
 
 platforms:
   - linux/amd64
   - linux/arm64
 modules:
   - from-file: base/common.yml
-  - from-file: base/nvidia.yml
+  #- from-file: base/nvidia.yml
   - type: os-release
     properties:
       PRETTY_NAME: BlueBuild OS for Nvidia (FROM Fedora base-atomic)
