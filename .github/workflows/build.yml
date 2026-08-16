@@ -30,8 +30,14 @@ jobs:
           - recipe.yml
     steps:
       # the build is fully handled by the reusable github action
+      #- name: Checkout repository
+      #  uses: actions/checkout@v4
+      - name: Wirte Secure Boot MOK Key
+        run: |
+          echo "${{ secrets.SECURE_BOOT_PRIV_KEY }}" > ./MOK.priv
+      
       - name: Build Custom Image
-        uses: blue-build/github-action@v1.11
+        uses: blue-build/github-action@v1.12
         with:
           recipe: ${{ matrix.recipe }}
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
