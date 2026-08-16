@@ -37,7 +37,7 @@ jobs:
           echo "${{ secrets.SECURE_BOOT_PRIV_KEY }}" > ./MOK.priv
       
       - name: Build Custom Image
-        uses: blue-build/github-action@v1.11
+        uses: blue-build/github-action@v1.12
         with:
           recipe: ${{ matrix.recipe }}
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
