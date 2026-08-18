@@ -29,6 +29,11 @@ modules:
     replace:
       - from-repo: fedora-multimedia
         skip-unavailable: true
+        exclude:
+          - steam
+          - spotify
+          - uld
+          - rar
         packages:
           - libva
           - mesa-dri-drivers
@@ -39,6 +44,7 @@ modules:
           - mesa-va-drivers
           - mesa-vulkan-drivers
           - libheif
+    
 
   # x86_64 packages only, hence why skip-unavailable is set
   - type: dnf
@@ -124,7 +130,6 @@ modules:
         - nvtop
         - openrgb-udev-rules
         - openssl
-        - oversteer-udev
         - pam-u2f
         - pam_yubico
         - pamu2fcfg
@@ -138,7 +143,6 @@ modules:
         - tmux
         - traceroute
         - usbmuxd
-        - vim
         - wireguard-tools
         - wl-clipboard
         - xhost
