@@ -32,6 +32,8 @@ modules:
         - lxqt-qtplugin
         - lxqt-themes
         - lxqt-powermanagement
-      exclude: 
+    remove:
+      auto-remove: false
+      packages:
         - qterminal
         - breeze-icon-theme
