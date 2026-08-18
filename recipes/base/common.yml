@@ -25,6 +25,7 @@ modules:
   # Install stuff from negativo
   - type: dnf
     repos:
+      cleanup: true
       nonfree: negativo17
     replace:
       - from-repo: fedora-multimedia
