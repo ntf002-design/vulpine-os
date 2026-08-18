@@ -44,6 +44,14 @@ modules:
           - mesa-va-drivers
           - mesa-vulkan-drivers
           - libheif
+  
+  - type: script
+    snippets: 
+      - rm -f /etc/yum.repos.d/fedora-steam*.repo
+      - rm -f /etc/yum.repos.d/fedora-spotify*.repo
+      - rm -f /etc/yum.repos.d/fedora-rar*.repo
+      - rm -f /etc/yum.repos.d/fedora-uld*.repo
+    
     
 
   # x86_64 packages only, hence why skip-unavailable is set
@@ -143,6 +151,7 @@ modules:
         - tmux
         - traceroute
         - usbmuxd
+        - vlc
         - wireguard-tools
         - wl-clipboard
         - xhost
