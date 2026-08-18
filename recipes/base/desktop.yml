@@ -3,6 +3,7 @@ modules:
     install:
       skip-unavailable: true
       packages:
+        - lxqt-session
         - lxqt-wayland-session
         - labwc
         - sddm
