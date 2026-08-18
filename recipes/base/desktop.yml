@@ -1,0 +1,28 @@
+modules:
+  - type: dnf
+    install:
+      skip-unavailable: true
+      packages:
+        - lxqt-wayland-session
+        - labwc
+        - sddm
+        - foot
+        - lxqt-panel
+        - lxqt-runner
+        - lxqt-notificationd
+        - pcmanfm-qt
+        - lxqt-config
+        - lxqt-policykit
+        - swaylock
+        - swayidle
+        - kanshi
+        - wdisplays
+        - xorg-x11-server-Xwayland
+        - mate-settings-daemon
+        - lxqt-wallet
+        - qt5-qtgraphicaleffects
+        - qt5-qtquickcontrols2
+        - qt5-qtsvg
+        - kwallet
+        - pam-kwallet
+        - screengrab
