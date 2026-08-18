@@ -5,7 +5,9 @@ modules:
       packages:
         - lxqt-session
         - lxqt-wayland-session
-        - labwc
+        - lxqt-sway-session
+        - sway
+        - swaybg
         - sddm
         - foot
         - lxqt-panel
@@ -30,3 +32,6 @@ modules:
         - lxqt-qtplugin
         - lxqt-themes
         - lxqt-powermanagement
+      exclude: 
+        - qterminal
+        - breeze-icon-theme
