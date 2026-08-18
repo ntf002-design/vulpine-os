@@ -27,3 +27,6 @@ modules:
         - kwallet
         - pam-kwallet
         - screengrab
+        - lxqt-qtplugin
+        - lxqt-themes
+        - lxqt-powermanagement
