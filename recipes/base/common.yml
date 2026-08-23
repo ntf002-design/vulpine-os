@@ -192,8 +192,6 @@ modules:
         - gvfs-mtp
         - mpd
         - ncmpcpp
-        - freesweep
-        - arandr
       exclude:
         - google-noto-sans-cjk-vf-fonts
         - default-fonts-cjk-sans

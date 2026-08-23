@@ -9,7 +9,6 @@ modules:
         - sway
         - swaybg
         - sddm
-        - foot
         - lxqt-panel
         - fuzzel
         - lxqt-notificationd
@@ -36,5 +35,4 @@ modules:
     remove:
       auto-remove: false
       packages:
-        - qterminal
         - breeze-icon-theme
