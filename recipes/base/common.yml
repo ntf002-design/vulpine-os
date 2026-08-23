@@ -152,7 +152,7 @@ modules:
         - google-noto-sans-cjk-fonts
         - google-noto-sans-javanese-fonts
         - google-noto-sans-sundanese-fonts
-        - htop
+        - btop
         - just
         - libcamera
         - libcamera-tools
@@ -190,6 +190,10 @@ modules:
         - gvfs-smb
         - gvfs-nfs
         - gvfs-mtp
+        - mpd
+        - ncmpcpp
+        - freesweep
+        - arandr
       exclude:
         - google-noto-sans-cjk-vf-fonts
         - default-fonts-cjk-sans

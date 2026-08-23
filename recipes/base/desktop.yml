@@ -11,7 +11,7 @@ modules:
         - sddm
         - foot
         - lxqt-panel
-        - lxqt-runner
+        - fuzzel
         - lxqt-notificationd
         - pcmanfm-qt
         - lxqt-config
@@ -32,6 +32,7 @@ modules:
         - lxqt-qtplugin
         - lxqt-themes
         - lxqt-powermanagement
+        - kvantum
     remove:
       auto-remove: false
       packages:
