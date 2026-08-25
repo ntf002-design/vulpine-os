@@ -192,6 +192,11 @@ modules:
         - gvfs-mtp
         - mpd
         - ncmpcpp
+        - micro
+        - fastfetch
+        - autoconf
+        - automake
+        - pkgconfig
       exclude:
         - google-noto-sans-cjk-vf-fonts
         - default-fonts-cjk-sans
