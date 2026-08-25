@@ -32,6 +32,8 @@ modules:
         - lxqt-themes
         - lxqt-powermanagement
         - kvantum
+        - kvantum-qt5
+        - gtk-murrine-engine
     remove:
       auto-remove: false
       packages:
