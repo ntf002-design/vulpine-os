@@ -25,14 +25,14 @@ modules:
         - qt5-qtgraphicaleffects
         - qt5-qtquickcontrols2
         - qt5-qtsvg
+        - qt5ct
+        - qt6ct
         - kwallet
         - pam-kwallet
         - screengrab
         - lxqt-qtplugin
         - lxqt-themes
         - lxqt-powermanagement
-        - kvantum
-        - kvantum-qt5
         - gtk-murrine-engine
         - gtk3-devel
     remove:

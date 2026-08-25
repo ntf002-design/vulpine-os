@@ -197,6 +197,7 @@ modules:
         - autoconf
         - automake
         - pkgconfig
+        - make
       exclude:
         - google-noto-sans-cjk-vf-fonts
         - default-fonts-cjk-sans
