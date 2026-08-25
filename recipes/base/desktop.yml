@@ -33,6 +33,8 @@ modules:
         - lxqt-qtplugin
         - lxqt-themes
         - lxqt-powermanagement
+        - kvantum
+        - kvantum-qt5
         - gtk-murrine-engine
         - gtk3-devel
     remove:
