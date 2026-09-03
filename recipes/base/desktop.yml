@@ -29,14 +29,17 @@ modules:
         - qt6ct
         - kwallet
         - pam-kwallet
-        - screengrab
+        - flameshot
         - lxqt-qtplugin
         - lxqt-themes
         - lxqt-powermanagement
-        - kvantum
-        - kvantum-qt5
-        - gtk-murrine-engine
-        - gtk3-devel
+        #- kvantum
+        #- kvantum-qt5
+        #- gtk-murrine-engine
+        #- gtk3-devel
+        - plymouth
+        - plymouth-theme-spinner
+        - plymouth-system-theme
     remove:
       auto-remove: false
       packages:
