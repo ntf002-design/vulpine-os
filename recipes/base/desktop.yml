@@ -32,6 +32,7 @@ modules:
         - flameshot
         - lxqt-qtplugin
         - lxqt-themes
+        - lxqt-themes-fedora
         - lxqt-powermanagement
         #- kvantum
         #- kvantum-qt5
