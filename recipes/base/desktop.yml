@@ -45,3 +45,9 @@ modules:
       auto-remove: false
       packages:
         - breeze-icon-theme
+    remove:
+      auto-remove: true
+      packages:
+        - foot
+        - foot-terminfo
+        - foot-themes

@@ -204,12 +204,6 @@ modules:
         - google-noto-sans-cjk-vf-fonts
         - default-fonts-cjk-sans
     remove:
-      auto-remove: true
-      packages:
-        - foot
-        - foot-terminfo
-        - foot-themes
-    remove:
       auto-remove: false
       packages:
         - fedora-flathub-remote
