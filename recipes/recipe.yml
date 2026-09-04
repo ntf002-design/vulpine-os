@@ -11,7 +11,7 @@ image-version: 44 # You can pin to a specific version of Fedora as well
 
 platforms:
   - linux/amd64
-  - linux/arm64
+  #- linux/arm64
 modules:
   - from-file: base/common.yml
   - from-file: base/desktop.yml
