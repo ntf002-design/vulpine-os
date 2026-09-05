@@ -8,6 +8,10 @@ modules:
         - foot
         - foot-terminfo
         - foot-themes
+        - openbox
+        - breeze-cursor-theme
+        - breeze-icon-theme
+        - oxygen-icon-theme
   - type: script
     env:
       PUBLIC_KEY_DER_PATH: /etc/pki/akmods/certs/akmods-blue-build.der

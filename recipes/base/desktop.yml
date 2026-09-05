@@ -41,7 +41,6 @@ modules:
         - plymouth
         - plymouth-theme-spinner
         - plymouth-system-theme
-    remove:
-      auto-remove: false
-      packages:
-        - breeze-icon-theme
+        - adwaita-cursor-theme
+        - liberation-mono-fonts
+        - tango-icon-theme
