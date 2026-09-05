@@ -9,8 +9,8 @@ modules:
         - foot-terminfo
         - foot-themes
         - openbox
-        - breeze-cursor-theme
-        - breeze-icon-theme
+        #- breeze-cursor-theme
+        #- breeze-icon-theme
         - oxygen-icon-theme
   - type: script
     env:
