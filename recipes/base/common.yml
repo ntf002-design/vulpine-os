@@ -200,6 +200,9 @@ modules:
         - pkgconfig
         - make
         - rclone
+        # PRODUCTIVITY - - - - - -
+        - conda
+        - emacs
       exclude:
         - google-noto-sans-cjk-vf-fonts
         - default-fonts-cjk-sans
