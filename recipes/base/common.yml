@@ -201,6 +201,7 @@ modules:
         - make
         - rclone
         # PRODUCTIVITY - - - - - -
+        # Things to install in Conda: R, Python (pip, pandas, matplotlib...), C++, GNU Octave (MATLAB replacement), GNU Plot, llama.cpp
         - conda
         - emacs
       exclude:
