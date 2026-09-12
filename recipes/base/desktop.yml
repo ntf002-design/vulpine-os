@@ -34,10 +34,10 @@ modules:
         - lxqt-themes
         - lxqt-themes-fedora
         - lxqt-powermanagement
-        #- kvantum
-        #- kvantum-qt5
-        #- gtk-murrine-engine
-        #- gtk3-devel
+        - kvantum
+        - kvantum-qt5
+        - gtk-murrine-engine
+        - gtk3-devel
         - plymouth
         - plymouth-theme-spinner
         - plymouth-system-theme
