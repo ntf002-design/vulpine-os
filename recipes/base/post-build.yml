@@ -5,9 +5,9 @@ modules:
     remove:
       auto-remove: true
       packages:
-        - foot
-        - foot-terminfo
-        - foot-themes
+        #- foot
+        #- foot-terminfo
+        #- foot-themes
         #- openbox
         #- breeze-cursor-theme
         #- breeze-icon-theme
