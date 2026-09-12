@@ -10,6 +10,7 @@ modules:
         - swaybg
         - sddm
         - lxqt-panel
+        - lxqt-menu-data
         - fuzzel
         - lxqt-notificationd
         - pcmanfm-qt
