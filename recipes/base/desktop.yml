@@ -5,8 +5,8 @@ modules:
       packages:
         - lxqt-session
         - lxqt-wayland-session
-        - lxqt-sway-session
-        - sway
+        - lxqt-niri-session
+        - niri
         - swaybg
         - sddm
         - lxqt-panel
