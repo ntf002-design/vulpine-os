@@ -8,6 +8,7 @@ modules:
         - lxqt-niri-session
         - niri
         - niri-settings
+        - xwayland-satellite
         - swaybg
         - sddm
         - lxqt-panel
