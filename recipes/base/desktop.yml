@@ -11,6 +11,7 @@ modules:
         - sddm
         - lxqt-panel
         - lxqt-menu-data
+        - lxqt-archiver
         - fuzzel
         - lxqt-notificationd
         - pcmanfm-qt
