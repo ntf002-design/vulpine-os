@@ -13,7 +13,7 @@ modules:
         - sddm
         - lxqt-panel
         - lxqt-menu-data
-        - fuzzel
+        - tofi
         - lxqt-notificationd
         - pcmanfm-qt
         - lxqt-config
