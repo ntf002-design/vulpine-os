@@ -47,3 +47,7 @@ modules:
         - adwaita-cursor-theme
         - liberation-mono-fonts
         - tango-icon-theme
+  - type: dnf
+    remove:
+      packages:
+        - alacritty
