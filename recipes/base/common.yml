@@ -161,6 +161,7 @@ modules:
         - libcamera-ipa
         - libimobiledevice-utils
         - libratbag-ratbagd
+        - libnotify
         - lshw
         - net-tools
         - nvme-cli
