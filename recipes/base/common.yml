@@ -31,7 +31,6 @@ modules:
       - from-repo: fedora-multimedia
         skip-unavailable: true
         exclude:
-          - steam
           - spotify
           - uld
           - rar
@@ -139,7 +138,6 @@ modules:
         - bootc #Swapping images
         - ublue-os-udev-rules #udev stuff for similar images
         - squashfs-tools #Squashfs read-only images? No idea what this is for but it seems loadbearing not touching it
-        - cosign #cosign
         - fedora-repos-archive #repo definitions for older packages
         - just #Oh hey just is everywhere here
         - zstd #File compression
@@ -165,7 +163,7 @@ modules:
         - qmake6
         - golang #All this building stuff is probs suited for a container rather than host system. After a while if I don't use these enough on host system I'll remove them (there's also stuff like rustup, gcc, clang, and others)
         - rclone #For mounting clouds
-        - dex #Manages .desktop files
+        #- dex-autostart #Manages .desktop files
       ## SHELL
         - zsh #Bash replacement shell
         - fzf #Command-line fuzzy finder
@@ -193,7 +191,7 @@ modules:
         - mpd #Music Player Daemon
         - ncmpcpp #Music Player CLI
         - fftw2 #for visualiser
-        - fftw-dev #same
+        - fftw-devel #same
         - playerctl #Helps setting media keys
         - mpdris2 #Same
         - easyeffects #Microphone effects for replacing Logitech G Hub
@@ -227,7 +225,6 @@ modules:
         #- powerstat #Power consumption cli tool - Needed for laptops
         #- solaar-udev
       ## 
-        - steam #STEAM
         - emacs-pgtk #To interface better with external things rather than a sandbox
         # PRODUCTIVITY - - - - - -
         # Things to install in Conda: R, Python (pip, pandas, matplotlib...), C++, GNU Octave (MATLAB replacement), GNU Plot, llama.cpp
