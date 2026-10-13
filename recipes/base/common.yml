@@ -131,79 +131,87 @@ modules:
       copr:
         - ublue-os/packages
         - ublue-os/staging
+        - shengis/mako
     install:
       skip-unavailable: true
       packages:
-        - bootc
-        - ublue-os-udev-rules
-        - fedora-repos-archive
-        - zstd
-        - sbsign
-        - alsa-firmware
-        - apr
-        - apr-util
-        - distrobox
-        - ffmpegthumbnailer
-        - flatpak-spawn
-        - fuse
-        - fuse-sshfs
-        - fzf
-        - grub2-tools-extra
-        - google-noto-sans-balinese-fonts
-        - google-noto-sans-cjk-fonts
-        - google-noto-sans-javanese-fonts
-        - google-noto-sans-sundanese-fonts
-        - btop
-        - just
-        - libcamera
-        - libcamera-tools
-        - libcamera-gstreamer
-        - libcamera-ipa
-        - libimobiledevice-utils
-        - libratbag-ratbagd
-        - libnotify
-        - lshw
-        - net-tools
-        - nvme-cli
-        - nvtop
-        - openrgb-udev-rules
-        - openssl
-        - pam-u2f
-        - pam_yubico
-        - pamu2fcfg
-        - pipewire-plugin-libcamera
-        - powerstat
-        - smartmontools
-        - solaar-udev
-        - squashfs-tools
-        - symlinks
-        - tcpdump
-        - tmux
-        - traceroute
-        - usbmuxd
-        - vlc
-        - wireguard-tools
-        - wl-clipboard
-        - xhost
-        - xorg-x11-xauth
-        - yubikey-manager
-        - openssh-askpass
-        - gvfs-fuse
+      ## FILES, BOOTING, ROOT, STUFF
+        - bootc #Swapping images
+        - ublue-os-udev-rules #udev stuff for similar images
+        - squashfs-tools #Squashfs read-only images? No idea what this is for but it seems loadbearing not touching it
+        - fedora-repos-archive #repo definitions for older packages
+        - just #Oh hey just is everywhere here
+        - zstd #File compression
+        - sbsign #UEFI boot signing
+        - apr #System portability layer
+        - apr-util #Util for apr I'm assuming
+        - fuse #Mounting
+        - fuse-sshfs #Ssh mounting?
+        - grub2-tools-extra #Extra grub debugging tools
+        - openssl #cryptography tools (for whatever usage idk)
+        - symlinks #symlinks
+        - wireguard-tools #Utils for managing wireguard connections? (for whatever usage idk)
+        - gvfs-fuse #GNOME file managing utilities, although not completely applicable to GNOME? :O Useful I guess
         - gvfs-smb
         - gvfs-nfs
         - gvfs-mtp
-        - mpd
-        - ncmpcpp
-        - micro
-        - fastfetch
-        - autoconf
-        - automake
-        - pkgconfig
-        - make
-        - rclone
+        - autoconf #For building things
+        - automake #For building things (actually wait idk if I can built things if this is immutable hmmmm)
+        - pkgconfig #Compiling helper
+        - make #Building-compiling
+        - rclone #For mounting clouds
+      ## SHELL
+        - zsh #Bash replacement shell
+        - fzf #Command-line fuzzy finder
+        - tmux #tmux
+        - openssh-askpass #Password manager for ssh, def needed
+        - btop #btop
+        - nvtop #nvtop
+        - tcpdump #Displays network traffic via cli
+        - net-tools #ifconfig, netstat, arp, etc
+        - traceroute #Network diagnostics
+        - lshw #Command line util for hardware status
+        - smartmontools #Storage drive health tools
+        - nvme-cli #Command line util for nvme drive status
+        - micro #Basic text editor that isn't bloody Nano
+        - fastfetch #Larp Larp Larp Sahur
+      ## SOUND, MUSIC
+        - alsa-firmware #Sound card firmware
+        - ffmpegthumbnailer #lil thumbnail tool for ffmpeg to be used... probs never
+        - vlc #VLC MY BELOVED
+        - mpd #Music Player Daemon
+        - ncmpcpp #Music Player CLI
+      ## VIDEO AND CAMERA
+        - libcamera #Camera backend library
+        - libcamera-tools
+        - libcamera-gstreamer
+        - libcamera-ipa
+        - pipewire-plugin-libcamera #Connects libcamera with pipewire
+      ## OTHER PERIPHERALS
+        - libimobiledevice-utils #Utility to connect with Apple devices without Apple software
+        - usbmuxd #Manages connections to things like iPhones and iPads via USB connection
+        - libratbag-ratbagd #Gaming mouse utility backend - Replace Solaar
+        - piper #GUI for libratbag
+        - openrgb-udev-rules #Backend for openrgb (don't even have it lol)
+        - pam-u2f #Want USB-based 2FA? This
+        - pam_yubico #Older alternative to pam-u2f
+        - pamu2fcfg #Backend
+        - yubikey-manager #Manager software for pam_yubico?
+      ## CONTAINERISATION
+        - distrobox #CONTAINERISATION
+        - flatpak-spawn #Allows for flatpak commands inside a sandbox
+      ## NOT INCLUDED
+        #- google-noto-sans-balinese-fonts 
+        #- google-noto-sans-cjk-fonts
+        #- google-noto-sans-javanese-fonts
+        #- google-noto-sans-sundanese-fonts
+        #- powerstat #Power consumption cli tool - Needed for laptops
+        #- solaar-udev
+      ## 
+        - steam #STEAM
         # PRODUCTIVITY - - - - - -
         # Things to install in Conda: R, Python (pip, pandas, matplotlib...), C++, GNU Octave (MATLAB replacement), GNU Plot, llama.cpp
-        - conda
+        # THIS WILL BE DONE VIA A DISTROBOX
       exclude:
         - google-noto-sans-cjk-vf-fonts
         - default-fonts-cjk-sans
