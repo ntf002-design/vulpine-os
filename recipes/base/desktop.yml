@@ -17,6 +17,7 @@ modules:
         - pcmanfm-qt
         - lxqt-config
         - lxqt-policykit
+        - lxappearance
         - swaylock
         - swayidle
         - kanshi
@@ -28,6 +29,8 @@ modules:
         - qt5-qtsvg
         - qt5ct
         - qt6ct
+        - qt6-wayland
+        - python3-pyqt6
         - kwallet
         - pam-kwallet
         #- flameshot
@@ -45,12 +48,16 @@ modules:
         - adwaita-cursor-theme
         - liberation-mono-fonts
         - tango-icon-theme
+        - papirus-icon-theme
+        - faenza-icon-theme
         - libnotify #backend for notifications - - - - - - - - - - - - FOR DESKTOP.YML
         - mako #Notifications daemon - Replacing lxqt-notificationd
         - wl-clipboard #copy-paste utilities for Wayland
         - xhost #manage which hosts can connect to an X display server
         - xorg-x11-xauth #xorg. Seems loadbearing
+        - qalculate-qt #Calculator :D
   - type: dnf
     remove:
       packages:
         - alacritty
+        - fuzzel

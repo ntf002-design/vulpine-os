@@ -139,9 +139,11 @@ modules:
         - bootc #Swapping images
         - ublue-os-udev-rules #udev stuff for similar images
         - squashfs-tools #Squashfs read-only images? No idea what this is for but it seems loadbearing not touching it
+        - cosign #cosign
         - fedora-repos-archive #repo definitions for older packages
         - just #Oh hey just is everywhere here
         - zstd #File compression
+        - 7zip #File compression
         - sbsign #UEFI boot signing
         - apr #System portability layer
         - apr-util #Util for apr I'm assuming
@@ -149,6 +151,7 @@ modules:
         - fuse-sshfs #Ssh mounting?
         - grub2-tools-extra #Extra grub debugging tools
         - openssl #cryptography tools (for whatever usage idk)
+        - openssh-server #ssh
         - symlinks #symlinks
         - wireguard-tools #Utils for managing wireguard connections? (for whatever usage idk)
         - gvfs-fuse #GNOME file managing utilities, although not completely applicable to GNOME? :O Useful I guess
@@ -159,7 +162,10 @@ modules:
         - automake #For building things (actually wait idk if I can built things if this is immutable hmmmm)
         - pkgconfig #Compiling helper
         - make #Building-compiling
+        - qmake6
+        - golang #All this building stuff is probs suited for a container rather than host system. After a while if I don't use these enough on host system I'll remove them (there's also stuff like rustup, gcc, clang, and others)
         - rclone #For mounting clouds
+        - dex #Manages .desktop files
       ## SHELL
         - zsh #Bash replacement shell
         - fzf #Command-line fuzzy finder
@@ -167,20 +173,32 @@ modules:
         - openssh-askpass #Password manager for ssh, def needed
         - btop #btop
         - nvtop #nvtop
+        - htop #htop
+        - wev #For sensing buttons pressed
+        - evtest #Same thing
         - tcpdump #Displays network traffic via cli
         - net-tools #ifconfig, netstat, arp, etc
+        - arp-scan
         - traceroute #Network diagnostics
         - lshw #Command line util for hardware status
         - smartmontools #Storage drive health tools
         - nvme-cli #Command line util for nvme drive status
         - micro #Basic text editor that isn't bloody Nano
         - fastfetch #Larp Larp Larp Sahur
-      ## SOUND, MUSIC
+      ## SOUND, AUDIO, MUSIC
         - alsa-firmware #Sound card firmware
+        - pulseaudio-utils #pulse utils
         - ffmpegthumbnailer #lil thumbnail tool for ffmpeg to be used... probs never
         - vlc #VLC MY BELOVED
         - mpd #Music Player Daemon
         - ncmpcpp #Music Player CLI
+        - fftw2 #for visualiser
+        - fftw-dev #same
+        - playerctl #Helps setting media keys
+        - mpdris2 #Same
+        - easyeffects #Microphone effects for replacing Logitech G Hub
+        - lsp-plugins #Same
+        - headsetcontrol
       ## VIDEO AND CAMERA
         - libcamera #Camera backend library
         - libcamera-tools
@@ -200,6 +218,7 @@ modules:
       ## CONTAINERISATION
         - distrobox #CONTAINERISATION
         - flatpak-spawn #Allows for flatpak commands inside a sandbox
+        - wine #alcohol
       ## NOT INCLUDED
         #- google-noto-sans-balinese-fonts 
         #- google-noto-sans-cjk-fonts
@@ -209,6 +228,7 @@ modules:
         #- solaar-udev
       ## 
         - steam #STEAM
+        - emacs-pgtk #To interface better with external things rather than a sandbox
         # PRODUCTIVITY - - - - - -
         # Things to install in Conda: R, Python (pip, pandas, matplotlib...), C++, GNU Octave (MATLAB replacement), GNU Plot, llama.cpp
         # THIS WILL BE DONE VIA A DISTROBOX
