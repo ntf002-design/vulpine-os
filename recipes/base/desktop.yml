@@ -1,5 +1,10 @@
 modules:
   - type: dnf
+    repos:
+      cleanup: true
+      copr:
+        - shengis/mako
+  - type: dnf
     install:
       skip-unavailable: true
       packages:
@@ -50,7 +55,7 @@ modules:
         - tango-icon-theme
         - papirus-icon-theme
         - faenza-icon-theme
-        - libnotify #backend for notifications - - - - - - - - - - - - FOR DESKTOP.YML
+        - libnotify #backend for notifications
         - mako #Notifications daemon - Replacing lxqt-notificationd
         - wl-clipboard #copy-paste utilities for Wayland
         - xhost #manage which hosts can connect to an X display server

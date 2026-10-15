@@ -79,6 +79,7 @@ modules:
         - repo: fedora-multimedia
           packages:
             - ffmpeg-libs
+            - steam
             
 
   ## x86_64 packages only, hence why skip-unavailable is set
@@ -130,7 +131,6 @@ modules:
       copr:
         - ublue-os/packages
         - ublue-os/staging
-        - shengis/mako
     install:
       skip-unavailable: true
       packages:
