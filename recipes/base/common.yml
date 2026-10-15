@@ -79,7 +79,7 @@ modules:
         - repo: fedora-multimedia
           packages:
             - ffmpeg-libs
-            - steam
+            #- steam
             
 
   ## x86_64 packages only, hence why skip-unavailable is set
