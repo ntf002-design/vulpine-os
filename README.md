@@ -4,7 +4,7 @@ This repo and images are based off of base images maintained by the BlueBuild or
 
 Vulpine OS is just a personal project of mine to create a semi-declarative Fedora image prior to eventually swapping out my Windows-Debian dual-boot setup. Branches will be based on Fedora OS Versions. Main, as of right now, is Fedora 44. Vulpine OS runs a combination of LXQt and Sway, for a hybrid classic/tiling desktop experience, not often published with regular BlueBuild base images or Distro spins. Recipes will include packages and programs chosen personally for home PC use. Minimal dotfiles and customisation will be baked into these images, and applications often installed in similar repos are excluded - Steam, Discord and Firefox for example, _are not included_, and are installed separately post-build, to allow for minimal compilation and maximum runtime flexibility.
 
-Vulpine OS is based on fedora-base-nvidia-latest.
+Vulpine OS is based on fedora-base-nvidia-open-latest.
 
 ## Images
 
