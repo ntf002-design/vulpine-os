@@ -45,19 +45,20 @@ modules:
           - mesa-vulkan-drivers
           - libheif
           - steam
-    install: 
+    install: #INTEL GPU PACKAGES, NOT NEEDED
       packages:
         - repo: fedora-multimedia
           skip-unavailable: true
           packages:
-            - intel-vaapi-driver
-    replace:
-      - from-repo: fedora-multimedia
-        skip-unavailable: true
-        packages:
-          - libva-intel-media-driver
-          - intel-gmmlib
-          - intel-mediasdk
+          #  - intel-vaapi-driver
+            - nvidia-vaapi-driver          
+   # replace:
+   #   - from-repo: fedora-multimedia
+   #     skip-unavailable: true
+   #     packages:
+   #       - libva-intel-media-driver
+   #       - intel-gmmlib
+   #       - intel-mediasdk
     install:
       packages:
         - libopenjph
@@ -80,7 +81,6 @@ modules:
         - repo: fedora-multimedia
           packages:
             - ffmpeg-libs
-            #- steam
             
 
   ## x86_64 packages only, hence why skip-unavailable is set
@@ -157,12 +157,12 @@ modules:
         - gvfs-smb
         - gvfs-nfs
         - gvfs-mtp
-        - autoconf #For building things
-        - automake #For building things (actually wait idk if I can built things if this is immutable hmmmm)
-        - pkgconfig #Compiling helper
-        - make #Building-compiling
-        - qmake6
-        - golang #All this building stuff is probs suited for a container rather than host system. After a while if I don't use these enough on host system I'll remove them (there's also stuff like rustup, gcc, clang, and others)
+        #- autoconf #For building things
+        #- automake #For building things (actually wait idk if I can built things if this is immutable hmmmm)
+        #- pkgconfig #Compiling helper
+        #- make #Building-compiling
+        #- qmake6
+        #- golang #All this building stuff is probs suited for a container rather than host system. After a while if I don't use these enough on host system I'll remove them (there's also stuff like rustup, gcc, clang, and others)
         - rclone #For mounting clouds
         #- dex-autostart #Manages .desktop files
       ## SHELL

@@ -15,7 +15,7 @@ platforms:
 modules:
   - from-file: base/common.yml
   - from-file: base/desktop.yml
-  #- from-file: base/nvidia.yml
+  - from-file: base/nvidia.yml
   - type: os-release
     properties:
       PRETTY_NAME: Vulpine OS (WIP) #BlueBuild OS for Nvidia (FROM Fedora base-atomic)
